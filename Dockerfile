@@ -1,7 +1,7 @@
 FROM debian
 MAINTAINER Jacek Kowalski <Jacek@jacekk.info>
 
-ENV OPENFIRE_VERSION 4.0.0
+ENV OPENFIRE_VERSION 4.0.1
 
 RUN apt-get -y update \
 	&& apt-get -y install openjdk-7-jre-headless wget sudo \
