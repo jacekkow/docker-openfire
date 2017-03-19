@@ -1,7 +1,7 @@
 FROM debian
 MAINTAINER Jacek Kowalski <Jacek@jacekk.info>
 
-ENV OPENFIRE_VERSION 4.1.0
+ENV OPENFIRE_VERSION 4.1.1
 
 RUN echo 'deb http://httpredir.debian.org/debian jessie-backports main' > \
 		/etc/apt/sources.list.d/jessie-backports.list \
