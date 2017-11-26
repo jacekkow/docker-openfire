@@ -5,7 +5,8 @@ ENV OPENFIRE_VERSION 4.1.5
 
 RUN apt-get -y update \
 	&& apt-get -y install wget sudo \
-	&& apt-get -y clean
+	&& apt-get -y clean \
+	&& rm -Rf /var/lib/apt/lists/*
 
 RUN cd /tmp \
 	&& wget -O openfire.deb "https://www.igniterealtime.org/downloadServlet?filename=openfire/openfire_${OPENFIRE_VERSION}_all.deb" \
