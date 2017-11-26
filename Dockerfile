@@ -1,12 +1,10 @@
-FROM debian:jessie
+FROM openjdk:8-jre-slim
 MAINTAINER Jacek Kowalski <Jacek@jacekk.info>
 
 ENV OPENFIRE_VERSION 4.1.5
 
-RUN echo 'deb http://httpredir.debian.org/debian jessie-backports main' > \
-		/etc/apt/sources.list.d/jessie-backports.list \
-	&& apt-get -y update \
-	&& apt-get -y -t jessie-backports install openjdk-8-jre-headless wget sudo \
+RUN apt-get -y update \
+	&& apt-get -y install wget sudo \
 	&& apt-get -y clean
 
 RUN cd /tmp \
